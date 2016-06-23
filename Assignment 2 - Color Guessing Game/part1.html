@@ -1,0 +1,39 @@
+<!--Coded by Ali Denno-->
+<html>
+	<head>
+	<title>
+	JavaScript Guessing Game
+	</title>
+	</head>
+	<body onload="do_game()">
+		<script>
+		var target;
+		var guess_input_text;
+		var guess_input;
+		var finished=false;
+		var guesses=0;
+		colors=["aqua","azure", "black", "burlyWood","cyan","gold","ivory","navy","tan" ];
+			function do_game()
+			{
+				var random_number=Math.random()*colors.length-1;
+				var random_number_integer=Math.floor(random_number);
+				
+				target=random_number_integer+1;	
+
+			
+				alert("here is a little help, your target color is: "+colors[target]);
+
+				while(!finished){
+					guess_input_text=prompt("I am thinking of one of these colors:\n\n"+(colors.sort()).join(', ')+" What color am I thinking of?");			
+					guess_input=guess_input_text;
+					guesses+=1;
+					if(guess_input_text==colors[target])
+					{
+						alert("Yes you've guessed right. and it only took you "+guesses+" guesses, you're a genius!");
+						return true;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
