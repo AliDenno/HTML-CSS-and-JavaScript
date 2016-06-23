@@ -1,0 +1,73 @@
+<!--Coded by Ali Denno-->
+<!doctype html>
+<html>
+<head>
+    <title>Part 2</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">	
+  			fieldset {background:lightyellow; border:10px solid yellow; margin-bottom:10px; width: 720px; }
+  			label {width: 180px;display: inline-block; text-align: right;  text-align: top; }
+  			.slabel{width: auto; }
+  			
+  					textarea {width:360px ; height:50px;}
+  			.centerTxt{text-align:center; padding: 0px 10px 0px 10px;}
+  			#TR{color:white; background-color:#832f82}
+  			#TL{color:white;background-color:#a72b26}
+    </style>    
+</head>
+
+<body>
+<h1>Please Enter Your Details For Our Dating Website!</h1>
+<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post">
+<!--Your face-->
+    <fieldset>
+    <legend>Your face</legend>
+    <label for="img">Your image:</label> <input type="file" id="img" name="img" required><br>
+    <label for="preview">Image preview:</label> <img id="preview" name="preview"><br>
+  </fieldset>
+
+<!--Your general details-->
+    <fieldset>
+    <legend>Your general details</legend>
+    <label for="name"> Name: </label>
+    <input type="text" id="name" name="name"  required><br>
+    <label  for="gender">Gender:</label> <input type="radio" id="gender" name="gender" value="male" required>Male<input type="radio" id="gender" name="gender" value="female" required>Female<br>
+    <label for="age"> Age: </label><input type="number" id="age" name="age" required><br>
+    <label for="birth">Date of birth: </label><input type="date" id="birth" name="birth"><br>
+    <label for="color">Favorite color:</label> <input type="color" id="color" name="color"><br>
+     <label for="country">Which country:</label><select id="country" name="country">
+      <option selected="selected" value="na"></option>
+      <option value="de">Germany</option>
+      <option value="se">Sweden</option>
+      <option value="ca">Canada</option>
+      <option value="ch">Switzerland</option>
+      <option value="ac">Ascension Island</option>
+    </select><br>
+  </fieldset>
+
+<!--Your indicators-->
+    <fieldset>
+    <legend>Your indicators</legend>
+   <label for="height">  Height:<span id="TL" class="centerTxt">Short</span> </label><input type="range" name="height" id="height" min="0" max="100" step = "5" value = "40"> <span id="TR" class="centerTxt">Tall</span><br>
+   <label for="salary"> Salary:<span id="TL" class="centerTxt">Poor</span> </label><input type="range" name="salary" id="salary" min="0" max="100" step = "5" value = "40"> <span id="TR" class="centerTxt">Rich</span><br>
+  </fieldset>
+
+<!--Your Contact Information-->
+    <fieldset>
+    <legend>Your Contact Information</legend>
+    <label for="email"> Email:</label> <input type="email" id="email" name="email" required><br>
+   <label for="mobile"> Mobile: </label><input type="tel" id="mobile" name="mobile"><br>
+  <label for="address">  Address:</label><textarea  id="address" name="address"> </textarea><br>
+     <label class="slabel" for="contact">Method to contact you: </label>
+    <input type="checkbox" name="contact" id="contact" value="Email"> Email
+  <input type="checkbox" name="contact" id="contact" value="Whatsapp" > Whatsapp
+    <input type="checkbox" name="contact" id="contact" value="In-add chat" > In-add chat
+  </fieldset>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

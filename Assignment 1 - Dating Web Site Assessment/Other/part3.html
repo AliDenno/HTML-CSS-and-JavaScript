@@ -1,0 +1,159 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Assignment: Dating Web Site Assessment</title>
+        <meta name="description" content="Dating Web Site Assessment for HTML CSS Javascript Coursera Course">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+     <body>
+        <style>
+            fieldset {
+                border-style: solid;
+                border-color: yellow;
+                border-width: 10px;
+                width:720px;
+                margin-bottom: 10px;
+                background: lightyellow;
+            }
+            label:hover {
+                font-size: larger;
+            }
+
+            input:hover {
+                font-size: larger;
+            }
+
+            select:hover {
+                font-size: larger;
+            }
+
+            textarea:hover {
+                font-size: larger;
+            }
+
+            .specialinput:hover {
+                font-size: larger;
+            }
+
+            label {
+                width: 180px;
+                display: inline-block;
+                text-align: right;
+                vertical-align: top;
+            }
+            .speciallabels {
+                width:auto;
+            }
+            .rangetext-left {
+                color: white;
+                text-align: center;
+                background: red;
+                display: inline-block;
+                width: 60px;
+                padding: 5px 5px 5px 5px;
+                margin: 0px 5px 0px 5px;
+                margin-top: 0px;
+            }
+            .rangetext-right {
+                color: white;
+                text-align: center;
+                background: purple;
+                display: inline-block;
+                width: 60px;
+                padding: 5px 5px 5px 5px;
+                margin: 0px 5px 0px 5px;
+                margin-top: 0px;
+            }
+            textarea {
+                width: 360px;
+                height: 50px;
+            }
+
+        </style> 
+    <div>
+        <h1>Please Enter Your Details For Our Dating Website!</h1>
+     	<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+            <!--FIRST FIELDSET:  YOUR FACE -->
+               <fieldset>
+                <legend>Your Face</legend>
+                <label for="your-image">Your Image:</label>
+                 <input type="file" name="your-image" accept="image/*" required>
+            </br>
+                <label for="image-preview">Image Preview:</label>
+                <img src="" id="preview" width="150px">
+            </fieldset>
+
+            <!--NEXT (2nd) FIELDSET:  YOUR GENERAL DETAILS -->
+               <fieldset>
+                <legend>Your General Details</legend>
+                <label for="your-name">Name:</label>
+                    <input type="text" name="your-name" placeholder="Your Full Name" required>
+            </br>
+                <label for="your-gender">Gender:</label>
+                    <input type="radio" name="your-gender" value="male" required> Male
+                    <input type="radio" name="your-gender" value="female" required> Female
+            </br>
+                <label for="your-age">Age:</label>
+                    <input type="number" name="your-age" maxlength="3" size="3" placeholder="18" required>
+            </br>
+                <label for="your-dob">Date of Birth:</label>
+                    <input type="date" name="your-dob">
+            </br>
+                <label for="your-favcolor">Favorite Color:</label>
+                    <input type="color" name="favcolor">
+            </br>
+
+                <label for="your-country">Which Country:</label>
+                    <select name="your-country">
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Hong Kong">Hong Kong</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="No Selection">No Selection</option>
+                    </select>
+            </fieldset>
+            <!--NEXT (3rd) FIELDSET:  YOUR INDICATORS -->
+            
+             <fieldset>
+                <legend>Your Indicators</legend>
+
+                <label for="your-height">Height:</label><span class="rangetext-left">Short</span>
+                    <input type="range" name="your-height" min="0" max="100"><span class="rangetext-right">Tall</span>
+            </br>
+                <label for="your-salary">Salary:</label><span class="rangetext-left">Poor</span>
+                    <input type="range" name="your-salary" min="0" max="100"><span class="rangetext-right">Rich</span>
+            </fieldset>
+
+
+            <!--NEXT (4th) FIELDSET:  YOUR CONTACT INFORMATION -->
+            <fieldset>
+                <legend>Your Contact Information</legend>
+
+                <label for="your-email">Email:</label>
+                    <input type="email" name="your-email" required>
+            </br>
+                <label for="your-mobile">Mobile:</label>
+                <input type="tel" name="your-mobile">
+
+            </br>
+                <label for="your-address">Address:</label>
+                <textarea name="your-address">
+                </textarea>
+
+            </br>
+                <label for="your-methodofcontact">Method to contact you:</label>
+                    <input type="checkbox" name="your-methodofcontact" value="Email"><span class="specialinput"> Email</span>
+                    <input type="checkbox" name="your-methodofcontact" value="Whatsapp"><span class="specialinput">  Whatsapp</span>
+                    <input type="checkbox" name="your-methodofcontact" value="In-app chat"><span class="specialinput">  In-app chat</span>
+            </fieldset>
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+
+<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+     	</body>
+</html>
